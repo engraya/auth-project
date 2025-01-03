@@ -29,26 +29,6 @@ project/
 `├── package.json            # Project dependencies and scripts`
 `└── server.js               # Entry point for the application`
 
-## Environment Variables
-
-`NODE_ENV=development`
-
-`DATABASE_URL=postgresql://yourusername:yourpassword@localhost:5432/yourdatabase`
-
-`APP_PORT=3000`
-
-`JWT_SECRET_KEY=yoursecretkey`
-
-`JWT_EXPIRES_IN=1h`
-
-`JWT_REFRESH_SECRET_KEY=yourrefreshsecretkey`
-
-`JWT_REFRESH_EXPIRES_IN=30d`
-
-`JWT_SECRET_KEY=`
-
-`JWT_EXPIRES_IN=`
-
 
 You will need the following:
 
@@ -72,6 +52,23 @@ npm install
 
 ```bash
 DATABASE_URL=
+`NODE_ENV=development`
+
+`DATABASE_URL=postgresql://yourusername:yourpassword@localhost:5432/yourdatabase`
+
+`APP_PORT=3000`
+
+`JWT_SECRET_KEY=yoursecretkey`
+
+`JWT_EXPIRES_IN=1h`
+
+`JWT_REFRESH_SECRET_KEY=yourrefreshsecretkey`
+
+`JWT_REFRESH_EXPIRES_IN=30d`
+
+`JWT_SECRET_KEY=`
+
+`JWT_EXPIRES_IN=`
 ```
 
 4. Run the migrations using Sequelize.
