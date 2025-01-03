@@ -10,6 +10,31 @@ This project implements a basic authentication system with user registration, lo
 4. [Testing the Endpoints](#testing-the-endpoints)
 5. [Project Structure](#project-structure)
 
+## Project Structure
+project/
+├── controllers/            # Contains the controllers for handling requests
+│   └── authController.js   # Manages user authentication-related actions
+├── models/                 # Contains Sequelize models
+│   └── user.js             # User model definition
+├── routes/                 # Contains route definitions
+│   └── authRoute.js        # Authentication routes
+├── services/               # Contains the service logic
+│   └── authService.js      # Business logic for user registration, login, and token refresh
+├── migrations/             # Contains Sequelize migrations
+├── config/                 # Configuration files (e.g., database configuration)
+├── .env                    # Environment variables for the app
+├── package.json            # Project dependencies and scripts
+└── server.js               # Entry point for the application
+
+## Environment Variables
+NODE_ENV=development
+DATABASE_URL=postgresql://yourusername:yourpassword@localhost:5432/yourdatabase
+APP_PORT=3000
+JWT_SECRET_KEY=yoursecretkey
+JWT_EXPIRES_IN=1h
+JWT_REFRESH_SECRET_KEY=yourrefreshsecretkey
+JWT_REFRESH_EXPIRES_IN=30d
+
 You will need the following:
 
 - A [Neon](https://neon.tech) account and a project
@@ -40,24 +65,18 @@ DATABASE_URL=
 npx sequelize db:migrate
 ```
 
-5. Add some entries to the database by running the seed script.
-
-```bash
-node seed.js
-```
-
-6. Start the server.
+5. Start the server.
 
 ```bash
 node index.js
 ```
 
-7. Visit `http://localhost:3000` in your browser to see the list of authors and books. Or use curl to access the api from the terminal.
+6. Visit `http://localhost:3000` in your browser to see the list of authors and books. Or use curl to access the api from the terminal.
 
 ```bash
-# Get a list of authors
-curl http://localhost:3000/authors
+- The README now correctly reflects the auth endpoints (`/auth/register`, `/auth/login`, `/auth/refresh-token`) instead of the previous author and book endpoints.
+- The `curl` examples are updated to match your authentication endpoints and their usage.
 
-# Get books by author with id 1
-curl http://localhost:3000/books/1
+Let me know if you'd like to further adjust any details!
+
 ```
