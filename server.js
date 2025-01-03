@@ -1,22 +1,17 @@
 require('dotenv').config({ path: `${process.cwd()}/.env` });
 const express = require('express');
 
+
+// APPLICATION ROUTES AND MIDDLEWARES
+const authRouter = require('./routes/authRoute');
+
+
 const app = express();
 
 app.use(express.json());
 
-
-
-
-
-
-app.use('*', catchAsync(async (req, res, next) => {
-        throw new AppError(`Can't find ${req.originalUrl} on this server`, 404);
-    })
-);
-
-
-
+// APP ROUTES MIDDLEWARES
+app.use('/api/auth', authRouter);
 
 
 const PORT = process.env.APP_PORT || 4000;
