@@ -15,20 +15,21 @@ This project implements a basic authentication system with user registration, lo
 
 ## Project Structure
 project/
-`├── controllers/            # Contains the controllers for handling requests`
-`│   └── authController.js   # Manages user authentication-related actions`
-`├── models/                 # Contains Sequelize models`
-`│   └── user.js             # User model definition`
-`├── routes/                 # Contains route definitions`
-`│   └── authRoute.js        # Authentication routes`
-`├── services/               # Contains the service logic`
-`│   └── authService.js      # Business logic for user registration, login, and token refresh`
-`├── migrations/             # Contains Sequelize migrations`
-`├── config/                 # Configuration files (e.g., database configuration)`
-`├── .env                    # Environment variables for the app`
-`├── package.json            # Project dependencies and scripts`
-`└── server.js               # Entry point for the application`
-
+```bash
+├── controllers/            # Contains the controllers for handling requests
+│   └── authController.js   # Manages user authentication-related actions
+├── models/                 # Contains Sequelize models
+│   └── user.js             # User model definition
+├── routes/                 # Contains route definitions
+│   └── authRoute.js        # Authentication routes
+├── services/               # Contains the service logic
+│   └── authService.js      # Business logic for user registration, login, and token refresh
+├── migrations/             # Contains Sequelize migrations
+├── config/                 # Configuration files (e.g., database configuration)
+├── .env                    # Environment variables for the app
+├── package.json            # Project dependencies and scripts
+└── server.js               # Entry point for the application
+```
 
 You will need the following:
 
@@ -52,23 +53,15 @@ npm install
 
 ```bash
 DATABASE_URL=
-`NODE_ENV=development`
-
-`DATABASE_URL=postgresql://yourusername:yourpassword@localhost:5432/yourdatabase`
-
-`APP_PORT=3000`
-
-`JWT_SECRET_KEY=yoursecretkey`
-
-`JWT_EXPIRES_IN=1h`
-
-`JWT_REFRESH_SECRET_KEY=yourrefreshsecretkey`
-
-`JWT_REFRESH_EXPIRES_IN=30d`
-
-`JWT_SECRET_KEY=`
-
-`JWT_EXPIRES_IN=`
+NODE_ENV=development
+DATABASE_URL=postgresql://yourusername:yourpassword@localhost:5432/yourdatabase
+APP_PORT=3000
+JWT_SECRET_KEY=yoursecretkey
+JWT_EXPIRES_IN=1h
+JWT_REFRESH_SECRET_KEY=yourrefreshsecretkey
+JWT_REFRESH_EXPIRES_IN=30d
+JWT_SECRET_KEY=
+JWT_EXPIRES_IN=
 ```
 
 4. Run the migrations using Sequelize.
@@ -80,7 +73,7 @@ npx sequelize db:migrate
 5. Start the server.
 
 ```bash
-node index.js
+node server.js
 ```
 
 6. Visit `http://localhost:3000` in your browser to see the list of authors and books. Or use curl to access the api from the terminal.
