@@ -82,6 +82,4 @@ node server.js
 - The README now correctly reflects the auth endpoints (`/auth/register`, `/auth/login`, `/auth/refresh-token`) instead of the previous author and book endpoints.
 - The `curl` examples are updated to match your authentication endpoints and their usage.
 
-Let me know if you'd like to further adjust any details!
-
 ```
