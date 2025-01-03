@@ -1,5 +1,8 @@
 # Authentication System with JWT and Sequelize
 
+# Overview
+This project implements a secure user authentication system using Node.js, Sequelize, PostgreSQL, and JWT. It allows users to register, log in, and refresh their access tokens through a RESTful API. The system includes robust input validation, password hashing with bcrypt, and token management using JWT. The authentication process is structured into services, controllers, and routes for modularity and scalability. Secure access is provided through short-lived access tokens and long-lived refresh tokens. This solution is designed to handle common authentication workflows with an emphasis on security and performance.
+
 This project implements a basic authentication system with user registration, login, and token refresh functionality using JWT and Sequelize. It utilizes PostgreSQL as the database and includes features such as password hashing with bcrypt and secure token management.
 
 ## Table of Contents
